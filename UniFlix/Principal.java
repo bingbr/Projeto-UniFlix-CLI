@@ -3,6 +3,7 @@ import java.util.*;
 import factory.ClienteFactory;
 import iterator.*;
 import modelo.*;
+import adapter.*;
 
 public class Principal {
     public static void main(String[] args) {
@@ -16,7 +17,7 @@ public class Principal {
 
         try {
             do {
-                System.out.print("\nO que deseja fazer?\nDigite 1 - Adicionar usuários.			Digite 2 - Adicionar filmes/séries.\nDigite 3 - Exibir lista de usuários/catálogo.	Digite 4 - Editar ou Remover usuário ou filme/série.\nDigite 5 - SAIR\n> ");
+                System.out.print("\nDigite 1 - Adicionar usuários.			Digite 2 - Adicionar filmes/séries.\nDigite 3 - Exibir lista de usuários/catálogo.	Digite 4 - Editar ou Remover usuário ou filme/série.\nDigite 5 - Converter preço de dólar pra real.	Digite 6 - SAIR\n> ");
                 escolhaMenu = lendo.nextInt();
 
                 switch (escolhaMenu) {
@@ -57,12 +58,15 @@ public class Principal {
                             System.out.print("Digite a nota: ");
                             double acervoNota = lendo.nextDouble();
 
+                            System.out.print("Digite o valor do item: ");
+                            double acervoPreco = lendo.nextDouble();
+
                             if (qualTipo.equalsIgnoreCase("Filme")) {
                                 acervoTipo = AcervoTipoEnum.FILME;
                             } else if (qualTipo.equalsIgnoreCase("Serie") || qualTipo.equalsIgnoreCase("Série")) {
                                 acervoTipo = AcervoTipoEnum.SERIE;
                             }
-                            conteudoAcervo.adicionarAcervo(new Acervo(acervoTipo, acervoTitulo, acervoAno, acervoGenero, acervoNota));
+                            conteudoAcervo.adicionarAcervo(new Acervo(acervoTipo, acervoTitulo, acervoAno, acervoGenero, acervoNota, acervoPreco));
                         }
                         break;
                     case 3:
@@ -185,18 +189,30 @@ public class Principal {
                                 System.out.print("Digite a nota: ");
                                 double acervoNota = lendo.nextDouble();
 
+                                System.out.print("Digite o valor do item: ");
+                                double acervoPreco = lendo.nextDouble();
+
                                 if (qualTipo.equalsIgnoreCase("Filme")) {
                                     acervoTipo = AcervoTipoEnum.FILME;
                                 } else if (qualTipo.equalsIgnoreCase("Serie") || qualTipo.equalsIgnoreCase("Série")) {
                                     acervoTipo = AcervoTipoEnum.SERIE;
                                 }
 
-                                conteudoAcervo.editarAcervo(posicaoEditar, new Acervo(acervoTipo, acervoTitulo, acervoAno, acervoGenero, acervoNota));;
+                                conteudoAcervo.editarAcervo(posicaoEditar, new Acervo(acervoTipo, acervoTitulo, acervoAno, acervoGenero, acervoNota, acervoPreco));;
                                 System.out.print("Editado com sucesso.");
                             }
                         }
                         break;
+                    
                     case 5:
+                        PrecoAdapter precoReal = new PrecoAdapter();    
+                        System.out.print("\nDigite o preço em dólar do item: ");
+                        double precoDolar = lendo.nextDouble();
+                        precoReal.setPreco(precoDolar);
+
+                        System.out.print("O preço em real é de R$ " + precoReal.getPreco());
+                        break; 
+                    case 6:
                         System.out.println("\nFinalizando...");
                         lendo.close();
                         System.exit(0);

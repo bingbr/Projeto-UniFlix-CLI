@@ -6,14 +6,16 @@ public class Acervo {
     private int ano;
     private String genero;
     private double nota;
+    private double preco;
     
 
-    public Acervo(AcervoTipoEnum tipo, String titulo, int ano, String genero, double nota){
+    public Acervo(AcervoTipoEnum tipo, String titulo, int ano, String genero, double nota, double preco){
         this.tipo = tipo;
         this.titulo = titulo;
         this.ano = ano;
         this.genero = genero;
         this.nota = nota;
+        this.preco = preco;
     }
 
     public AcervoTipoEnum getTipo(){
@@ -36,8 +38,12 @@ public class Acervo {
         return nota;
     }
 
+    public double getPreco() {
+        return preco;
+    }
+
     @Override
     public String toString() {
-        return this.getTipo() + " -> titulo: " + this.getTitulo() + ", ano: " + this.getAno() + ", gênero: " + this.getGenero() + ", avaliação: " + this.getNota();
+        return this.getTipo() + " -> titulo: " + this.getTitulo() + ", ano: " + this.getAno() + ", gênero: " + this.getGenero() + ", avaliação: " + this.getNota() + ", USD $" + this.getPreco();
     }
 }
