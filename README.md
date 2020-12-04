@@ -1,6 +1,8 @@
 # Projeto UniFlix
 Projeto Java criado para avaliação da universidade que roda no console da IDE.
 
+O programa permite adicionar, visualizar, editar e excluir as listas de usuários, filmes e séries. Além de converter de dólar para real.
+
 ## Quais padrões de projeto foram utilizados?
 Foram utilizados os padrões: Factory, Iterator e Adapter.
 
