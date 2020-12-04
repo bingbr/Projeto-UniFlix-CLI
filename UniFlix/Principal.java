@@ -11,6 +11,7 @@ public class Principal {
         AcervoCollection conteudoAcervo = new AcervoCollectionImpl();
         AcervoTipoEnum acervoTipo = AcervoTipoEnum.TODOS;
         Scanner lendo = new Scanner(System.in);
+        PrecoAdapter precoReal = new PrecoAdapter(); 
         int escolhaMenu = 0;
 
         System.out.println("Bem-vindo!");
@@ -189,7 +190,7 @@ public class Principal {
                                 System.out.print("Digite a nota: ");
                                 double acervoNota = lendo.nextDouble();
 
-                                System.out.print("Digite o valor do item: ");
+                                System.out.print("Digite o preço do filme/série: ");
                                 double acervoPreco = lendo.nextDouble();
 
                                 if (qualTipo.equalsIgnoreCase("Filme")) {
@@ -203,14 +204,11 @@ public class Principal {
                             }
                         }
                         break;
-                    
                     case 5:
-                        PrecoAdapter precoReal = new PrecoAdapter();    
                         System.out.print("\nDigite o preço em dólar do item: ");
                         double precoDolar = lendo.nextDouble();
                         precoReal.setPreco(precoDolar);
-
-                        System.out.print("O preço em real é de R$ " + precoReal.getPreco());
+                        System.out.println("O preço em real é de R$ " + precoReal.getPreco());
                         break; 
                     case 6:
                         System.out.println("\nFinalizando...");
@@ -220,7 +218,7 @@ public class Principal {
                     default:
                         throw new InputMismatchException();
                 }
-            } while (escolhaMenu >= 0 && escolhaMenu < 5);
+            } while (escolhaMenu < 6);
 
         } catch (InputMismatchException e1) {
             System.err.println("\nERRO = Você digitou um valor inválido!");
