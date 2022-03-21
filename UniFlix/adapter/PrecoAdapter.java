@@ -4,6 +4,6 @@ public class PrecoAdapter extends PrecoDolar{
     
     @Override
     public void setPreco(double preco) {
-        super.setPreco(preco * 5.15);
+        super.setPreco(preco * 5.02375);
     }
 }
