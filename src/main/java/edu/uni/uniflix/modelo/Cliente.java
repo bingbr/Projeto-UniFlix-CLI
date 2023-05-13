@@ -1,4 +1,4 @@
-package modelo;
+package edu.uni.uniflix.modelo;
 
 public abstract class Cliente {
     public abstract int getCpf();
@@ -7,6 +7,6 @@ public abstract class Cliente {
 
     @Override
     public String toString() {
-        return "Nome: " + this.getNome() + ", cpf: " + this.getCpf() + ", e-mail: " + this.getEmail();
+        return "Nome: " + this.getNome() + ", CPF: " + this.getCpf() + ", E-mail: " + this.getEmail();
     }
 }

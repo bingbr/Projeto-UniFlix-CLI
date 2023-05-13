@@ -1,6 +1,6 @@
 # UniFlix CLI
 ## O que é?
-Um projeto feito em Java criado para avaliação da universidade que roda no console da IDE.
+Um projeto feito em Java criado para avaliação da universidade que roda no console.
 
 O UniFlix CLI permite adicionar, visualizar, editar e excluir as listas de usuários, filmes e séries. Além de converter de dólar para real.
 
@@ -8,15 +8,16 @@ O UniFlix CLI permite adicionar, visualizar, editar e excluir as listas de usuá
 Foram utilizados os padrões: Factory, Iterator e Adapter.
 
 ## Como usar?
-1. Abra o terminal na pasta [UniFlix](/UniFlix/ "/Uniflix")
-1. Insira o comando para compilar: `javac Principal.java`
-1. Agora basta inserir o comando para iniciar: `java Principal`
+_Necessário ter [JDK 17](https://www.oracle.com/java/technologies/downloads/#java17) ou superior instalado_
+1. Baixe o [UniFlix-CLI](https://github.com/bingbr/Projeto-UniFlix-CLI/releases)
+1. Abra a pasta onde está o UniFlix com o terminal 
+1. Execute usando o comando: `java -jar UniFlix-CLI-1.0.jar`
 
 ### Para a criação foram utilizados:
-* [Eclipse IDE 2020-09 R](https://www.eclipse.org/downloads/packages/ "IDE para desenvolvimento de aplicações Java")
-* [Java SE Development Kit 15.0.1 (JDK 15)](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html "Ambiente de desenvolvimento para construção de aplicativos e componentes usando o Java")
-* [Visual Studio Code 1.51.1](https://code.visualstudio.com/download "Editor de código simplificado com suporte para operações de desenvolvimento como depuração, execução de tarefas e controle de versão")
-
+* [Eclipse IDE](https://www.eclipse.org/downloads/packages/ "IDE para desenvolvimento de aplicações Java")
+* [Java Development Kit 17 LTS (JDK 17 LTS)](https://www.oracle.com/java/technologies/downloads/#java17 "Ambiente de desenvolvimento para construção de aplicativos e componentes usando o Java")
+* [Apache Maven](https://maven.apache.org/download.cgi "Ferramenta de automação de compilação usada para projetos Java")
+* [Visual Studio Code](https://code.visualstudio.com/download "Editor de código simplificado com suporte para operações de desenvolvimento como depuração, execução de tarefas e controle de versão")
 
 ## Menu:
 - [Adicionando usuário](#adicionando-usuário)
@@ -24,7 +25,6 @@ Foram utilizados os padrões: Factory, Iterator e Adapter.
 - [Editar/Remover usuário](#editando-usuário-da-lista)
 - [Lista de Filme/Série](#lista-de-filmesérie)
 - [Converter Dólar para Real](#dólar-pra-real)
-
 
 #### Adicionando usuário:
 ![Adicionando Usuário](/img/1-Adding_user.png)

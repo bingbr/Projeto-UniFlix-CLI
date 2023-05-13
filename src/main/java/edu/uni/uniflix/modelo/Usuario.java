@@ -1,4 +1,4 @@
-package modelo;
+package edu.uni.uniflix.modelo;
 
 public class Usuario extends Cliente{
     private int cpf;
@@ -11,27 +11,18 @@ public class Usuario extends Cliente{
         this.email = email;
     }
 
+    @Override
     public int getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
-        this.cpf = cpf;
-    }
-
+    @Override
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
+    @Override
     public String getEmail() {
         return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 }
